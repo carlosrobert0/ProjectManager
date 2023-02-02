@@ -4,8 +4,8 @@ import * as yup from "yup";
 
 import { ButtonSubmit, LoginContainer, WrapperInput } from "./styles";
 import { SignIn as S } from "phosphor-react";
-import { Navigate, NavLink, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
 
 interface FormData {
   username: string;
@@ -21,15 +21,18 @@ export function SignIn() {
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
     resolver: yupResolver(schema)
   });
+
   const navigate = useNavigate()
+
+  const { signIn } = useAuth()
   
   async function handleSign({ username, password }: FormData) {
     try {
-      // await signIn({username, password})
+      await signIn({username, password})
 
       navigate('/projects')
     } catch (error) {
-      
+      console.log(error)
     }
   }
   

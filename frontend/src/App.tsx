@@ -5,12 +5,15 @@ import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
 import { Router } from "./Router";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./hooks/auth";
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
-        <Router />
+        <AuthProvider>
+          <Router />
+        </AuthProvider>
       </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
