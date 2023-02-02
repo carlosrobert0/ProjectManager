@@ -1,5 +1,5 @@
 import { hash } from "bcrypt"
-import { UserRepository } from "../../repositories/implementations/UsersRepository"
+import { UsersRepository } from "../../repositories/implementations/UsersRepository"
 
 interface CreateUser {
   name: string
@@ -8,7 +8,7 @@ interface CreateUser {
 }
 
 export class CreateUserUseCase {
-  constructor(private usersRepository: UserRepository) {}
+  constructor(private usersRepository: UsersRepository) {}
 
   async execute({ name, username, password }: CreateUser) {
     const usersExists = await this.usersRepository.findUserExists(username)

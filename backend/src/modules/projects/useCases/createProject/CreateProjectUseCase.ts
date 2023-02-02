@@ -7,7 +7,7 @@ interface CreateProject {
   cost: number
   done: boolean
   deadline: Date
-  user_id: string
+  username: string
 }
 
 export class CreateProjectUseCase {
@@ -19,7 +19,7 @@ export class CreateProjectUseCase {
     cost,
     done,
     deadline,
-    user_id
+    username
   }: CreateProject) {
     const project = await this.projectsRepository.create({
       title,
@@ -27,7 +27,7 @@ export class CreateProjectUseCase {
       cost,
       done,
       deadline,
-      user_id
+      username
     })
 
     return project

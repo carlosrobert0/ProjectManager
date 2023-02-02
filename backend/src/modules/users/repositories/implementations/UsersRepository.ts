@@ -1,15 +1,15 @@
 import { prisma } from "../../../../database/prismaClient";
 import { IUsersRepository, UserDTO } from "../IUsersRepository";
 
-export class UserRepository implements IUsersRepository {
+export class UsersRepository implements IUsersRepository {
   private static INSTANCE: any
 
   public static getInstance(): any {
-    if (!UserRepository.INSTANCE) {
-      UserRepository.INSTANCE = new UserRepository()
+    if (!UsersRepository.INSTANCE) {
+      UsersRepository.INSTANCE = new UsersRepository()
     }
 
-    return UserRepository.INSTANCE
+    return UsersRepository.INSTANCE
   }
 
   async create({ name, username, password }: UserDTO): Promise<any> {

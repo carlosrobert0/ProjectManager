@@ -4,7 +4,7 @@ interface ProjectDTO {
   cost: number
   done: boolean
   deadline: Date
-  user_id: string
+  username: string
 }
 
 interface IProjectsRepository {
@@ -14,7 +14,7 @@ interface IProjectsRepository {
     cost,
     done,
     deadline,
-    user_id
+    username
   }: ProjectDTO): Promise<void>
 }
 

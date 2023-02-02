@@ -5,13 +5,14 @@ export class CreateProjectController {
   constructor(private createProjectUseCase: CreateProjectUseCase) { }
 
   async handle(request: Request, response: Response) {
+    const { username } = request
+
     const {
       title,
       zip_code,
       cost,
       done,
       deadline,
-      user_id
     } = request.body
 
     try {
@@ -21,7 +22,7 @@ export class CreateProjectController {
         cost,
         done,
         deadline,
-        user_id
+        username
       })
 
       return response.json(Project)

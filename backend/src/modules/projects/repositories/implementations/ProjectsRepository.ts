@@ -12,13 +12,13 @@ export class ProjectsRepository implements IProjectsRepository {
     return ProjectsRepository.INSTANCE
   }
 
-  async create({ 
+  async create({
     title,
     zip_code,
     cost,
     deadline,
     done,
-    user_id
+    username
   }: ProjectDTO): Promise<any> {
     const project = await prisma.projects.create({
       data: {
@@ -27,7 +27,7 @@ export class ProjectsRepository implements IProjectsRepository {
         cost,
         deadline,
         done,
-        user_id
+        username
       }
     })
 
