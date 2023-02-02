@@ -25,7 +25,7 @@ model Users {
 model Projects {
   id         String   @id @default(uuid())
   title      String
-  zip_code   String   @unique
+  zip_code   String
   cost       Int
   done       Boolean
   deadline   DateTime

@@ -16,7 +16,7 @@ export class CreateProjectController {
     } = request.body
 
     try {
-      const Project = await this.createProjectUseCase.execute({
+      const project = await this.createProjectUseCase.execute({
         title,
         zip_code,
         cost,
@@ -25,7 +25,7 @@ export class CreateProjectController {
         username
       })
 
-      return response.json(Project)
+      return response.json(project)
     } catch (error) {
       console.log(error)
     }
