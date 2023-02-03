@@ -10,8 +10,8 @@ export function Router() {
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/" element={<SignIn />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/projects" element={<Projects />} />
       </Route>
-      <Route path="/projects" element={<Projects />} />
     </Routes>
   )
 }

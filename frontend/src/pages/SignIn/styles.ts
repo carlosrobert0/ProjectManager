@@ -91,6 +91,8 @@ export const ButtonSubmit = styled.button`
   gap: 0.5rem;
   font-weight: bold;
 
+  font-family: 'Roboto', sans-serif;
+
   cursor: pointer;
 
   background-color: ${({ theme }) => theme['green-500']};

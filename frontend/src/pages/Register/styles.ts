@@ -87,6 +87,8 @@ export const ButtonSubmit = styled.button`
   padding: 1rem;
   border-radius: 0.215rem;
 
+  font-family: 'Roboto', sans-serif;
+
   display: flex;
   align-items: center;
   justify-content: center;

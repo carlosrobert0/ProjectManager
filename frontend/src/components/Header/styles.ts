@@ -40,15 +40,22 @@ export const LogoContainer = styled.div`
   align-items: center;
   justify-content: start;
 
-  gap: 1.5rem;
+  gap: 1.125rem;
+`
+
+export const ImageLogoKanban = styled.img`
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 `
 
 export const LogoText = styled.h1`
-  font-size: 1.125rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: normal;
-  color: ${({ theme }) => theme['gray-100']};
+  font-size: 1.25rem;
   line-height: 1.25rem;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+
+  color: ${({ theme }) => theme['gray-100']};
   transition: all 0.2s;
 
   &:hover {

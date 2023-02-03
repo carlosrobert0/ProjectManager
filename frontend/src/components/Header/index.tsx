@@ -1,16 +1,16 @@
-import { HeaderContainer, LogoContainer, LogoText } from "./styles";
+import { HeaderContainer, LogoContainer, ImageLogoKanban, LogoText } from "./styles";
 import { NavLink } from 'react-router-dom'
-import { Kanban, Plus, SignIn } from "phosphor-react";
+import { Plus, SignIn } from "phosphor-react";
 import { useTheme } from "styled-components";
 
-export function Header() {
-  const theme = useTheme()
+import kanban from './../../assets/kanban.png'
 
+export function Header() {
   return (
     <HeaderContainer>
       <NavLink to="/" title="Inicio" end style={{ textDecoration: 'none' }}>
         <LogoContainer>
-          <Kanban size={32} weight="thin" color={theme["green-300"]} />
+          <ImageLogoKanban src={kanban} />
           <LogoText>Gerenciador de projetos</LogoText>
         </LogoContainer>
       </NavLink>

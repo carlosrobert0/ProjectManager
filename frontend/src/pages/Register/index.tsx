@@ -116,7 +116,7 @@ export function Register() {
         </WrapperInput>
 
         <ButtonSubmit type="submit">
-          { isLoading ? 'Carregando ... ' : 'Continuar' }
+          { isLoading ? 'CARREGANDO ... ' : 'CONTINUAR' }
         </ButtonSubmit>
       </form>
     </LoginContainer>
