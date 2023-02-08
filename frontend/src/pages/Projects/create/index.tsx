@@ -87,11 +87,11 @@ export function CreateProject() {
           </WrapperInput>
 
           <WrapperInput>
-            <CheckCircle
+            <input
+              type="checkbox"
               {...register("done")}
               id="deaddoneline"
               name="done"
-              type="date"
             />
             <label
               htmlFor="deadline"
