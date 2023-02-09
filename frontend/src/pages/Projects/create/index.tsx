@@ -12,7 +12,6 @@ const schema = yup.object({
   title: yup.string().required('O nome é obrigatório.'),
   zip_code: yup.string().required('A data de nascimento é obrigatória.'),
   cost: yup.number().required('O CPF é obrigatório.'),
-  done: yup.boolean().required('O telefone é obrigatório.'),
   deadline: yup.string().required('O RG é obrigatório.'),
 }).required();
 
@@ -62,7 +61,7 @@ export function CreateProject() {
               {...register("cost")}
               id="cost"
               name="cost"
-              type="text"
+              type="number"
               placeholder="Custo"
             />
             <label
@@ -84,19 +83,6 @@ export function CreateProject() {
               htmlFor="deadline"
             >Prazo *</label>
             <p>{errors.deadline?.message}</p>
-          </WrapperInput>
-
-          <WrapperInput>
-            <input
-              type="checkbox"
-              {...register("done")}
-              id="deaddoneline"
-              name="done"
-            />
-            <label
-              htmlFor="deadline"
-            >Pronto *</label>
-            <p>{errors.done?.message}</p>
           </WrapperInput>
           
           <ButtonSubmit type="submit">

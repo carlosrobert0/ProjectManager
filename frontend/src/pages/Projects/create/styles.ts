@@ -11,7 +11,7 @@ export const LoginContainer = styled.div`
 
   h1 {
     font-size: 1.5rem;
-    color: ${({ theme }) => theme["orange-500"]};
+    color: ${({ theme }) => theme["green-500"]};
     margin-bottom: 2.5rem;
   }
 
@@ -46,7 +46,7 @@ export const LoginContainer = styled.div`
     a {
       font-weight: 500;
       text-decoration: none;
-      color: ${({ theme }) => theme["orange-500"]};
+      color: ${({ theme }) => theme["green-500"]};
     }
   }
 `
@@ -74,7 +74,7 @@ export const WrapperInput = styled.div`
     &:focus {
       box-shadow: none;
       transition: all 0.4s;
-      border-color: ${({ theme }) => theme['orange-500']};
+      border-color: ${({ theme }) => theme['green-500']};
     }
 
     &::placeholder {
@@ -112,12 +112,12 @@ export const ButtonSubmit = styled.button`
 
   cursor: pointer;
 
-  background-color: ${({ theme }) => theme['orange-500']};
+  background-color: ${({ theme }) => theme['green-500']};
   color: ${({ theme }) => theme['gray-100']};
 
   &:hover {
     transition: all 0.2s;
-    background: ${({ theme }) => theme['orange-300']};
+    background: ${({ theme }) => theme['green-300']};
   }
 
   &:disabled {
@@ -126,6 +126,6 @@ export const ButtonSubmit = styled.button`
   }
 
   &:not(:disabled):hover {
-    background: ${({ theme }) => theme['orange-300']};
+    background: ${({ theme }) => theme['green-300']};
   }
 `
